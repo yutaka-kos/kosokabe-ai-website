@@ -653,6 +653,20 @@ body {
     border-radius: 6px;
 }
 
+.work-link {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.work-link:hover {
+    color: var(--primary-light);
+}
+
 /* ===== Technology ===== */
 .tech-grid {
     display: grid;
