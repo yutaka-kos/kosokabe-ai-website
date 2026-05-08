@@ -20,8 +20,8 @@ nav.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// Scroll animations
-const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -40px 0px' };
+// Scroll animations (Apple-style)
+const observerOptions = { threshold: 0.12, rootMargin: '0px 0px -60px 0px' };
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -31,7 +31,9 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.querySelectorAll('.service-card, .work-card, .value-card, .tech-category, .about-text, .about-values').forEach(el => {
+document.querySelectorAll(
+    '.section .section-head, .services-list, .works-list, .value-list, .tech-list, .company-dl, .contact-form, .about-body'
+).forEach(el => {
     el.classList.add('fade-in');
     observer.observe(el);
 });
